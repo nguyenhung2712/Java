@@ -16,6 +16,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
 
 public class BMIComponent {
 
@@ -24,6 +25,7 @@ public class BMIComponent {
 	private JTextField txtWeight;
 	private JTextField txtRes;
 	private JTextField txtStt;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -96,15 +98,17 @@ public class BMIComponent {
 		panel_1.setLayout(null);
 		
 		JRadioButton rdbtnAsian = new JRadioButton("Asian");
+		buttonGroup.add(rdbtnAsian);
 		rdbtnAsian.setBackground(new Color(153, 255, 153));
 		rdbtnAsian.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		rdbtnAsian.setBounds(6, 32, 103, 21);
 		panel_1.add(rdbtnAsian);
 		
 		JRadioButton rdbtnNonAsian = new JRadioButton("Non Asian");
+		buttonGroup.add(rdbtnNonAsian);
 		rdbtnNonAsian.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		rdbtnNonAsian.setBackground(new Color(153, 255, 153));
-		rdbtnNonAsian.setBounds(6, 69, 103, 21);
+		rdbtnNonAsian.setBounds(6, 67, 103, 21);
 		panel_1.add(rdbtnNonAsian);
 		
 		txtRes = new JTextField();
